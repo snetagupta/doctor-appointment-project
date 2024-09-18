@@ -1,6 +1,7 @@
 import { NavLink, useNavigate } from "react-router-dom";
 import { assets } from "../assets/assets";
 import { useState } from "react";
+import { MdOutlineLocalHospital } from "react-icons/md";
 
 const Navbar = () => {
  const[showMenu,setShowMenu] = useState(false);
@@ -11,7 +12,7 @@ const Navbar = () => {
   return (
     <div className="flex items-center justify-between text-sm py-4 mb-5 border-b border-b-gray-400">
         <div className="flex items-center">
-      <img src={assets.AD} alt="" className="w-10 "/>
+        <MdOutlineLocalHospital className="text-primary text-4xl"/>
       <p className="text-2xl font-bold text-primary">AppointDoc</p>
       </div>
      {/* <img className="w-44 cursor-pointer" src={assets.logo} alt="" /> */}
