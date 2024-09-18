@@ -43,7 +43,6 @@ export const assets = {
     header_img,
     group_profiles,
     logo,
-    AD,
     chats_icon,
     verified_icon,
     info_icon,
