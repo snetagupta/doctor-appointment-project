@@ -40,7 +40,7 @@ const Footer = () => {
       {/* copywrite */}
       <div >
 <hr/>
-<p className="py-5 text-sm text-center text-gray-600">Copyright © 2024 GreatStack - All Right Reserved.</p>
+<p className="py-5 text-sm text-center text-gray-600">Copyright © 2024 AppointDoc - All Right Reserved.</p>
       </div>
     </div>
   );
