@@ -128,17 +128,23 @@ const Appointment = () => {
           <div className="flex gap-3 items-center w-full overflow-x-scroll mt-4">
             {docSlots.length &&
               docSlots.map((item, index) => (
+                // <div
+                // key={index}
+                //   onClick={() => setSlotIndex(index)}
+                //   className={`text-center py-6 min-w-16 rounded-full cursor-pointer ${
+                //     slotIndex === index
+                //       ? "bg-primary text-white"
+                //       : "border border-gray-200"
+                //   }`}
+                // >
                 <div
-                key={index}
-                  onClick={() => setSlotIndex(index)}
-                  className={`text-center py-6 min-w-16 rounded-full cursor-pointer ${
-                    slotIndex === index
-                      ? "bg-primary text-white"
-                      : "border border-gray-200"
-                  }`}
-                 
-                >
-                  <p>{item[0] && daysOfWeek[item[0].datetime.getDay()]}</p>
+          key={index}
+          onClick={!item[0] ? () => {} : () => setSlotIndex(index)} // Disable click for "NA" slots
+          className={`text-center py-6 min-w-16 rounded-full cursor-pointer ${
+            item[0] ? (slotIndex === index ? "bg-primary text-white" : "border border-gray-200") : "bg-gray-600 cursor-not-allowed"
+          }`}
+        >
+                  <p>{item[0] ? daysOfWeek[item[0].datetime.getDay()] : "NA"}</p>
                   <p>{item[0] && item[0].datetime.getDate()}</p>
                 </div>
               ))}
